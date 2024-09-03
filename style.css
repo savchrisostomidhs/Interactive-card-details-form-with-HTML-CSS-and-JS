@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url(./images/bg-main-desktop.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    color: hsl(0, 0%, 100%);
+    font-family: "Space Grotesk", sans-serif;
+    font: 18px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    gap: 130px;
+    height: 58%;
+    justify-content: space-between;
+    width: 77%;
+}
+
+/* Cards */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.front,
+.back {
+    border-radius: 10px;
+    height: 245px;
+    width: 447px;
+    position: relative;
+}
+
+.front-card,
+.back-card {
+    border-radius: 10px;
+    box-shadow: 16px 16px 20px 0px hsla(279, 6%, 55%, 0.2);
+}
+
+/* Front Card */
+
+.front-card {
+    height: 100%;
+    width: 100%;
+}
+
+.front img:first-child {
+    left: 30px;
+    position: absolute;
+    top: 25px;
+}
+
+.front>p {
+    bottom: 70px;
+    font-size: 28px;
+    left: 30px;
+    letter-spacing: 3.8px;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.front .down-info {
+    align-items: center;
+    bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    left: 30px;
+    letter-spacing: 2px;
+    position: absolute;
+    text-transform: uppercase;
+    width: 86%;
+}
+
+/* Back Card */
+
+.back {
+    margin-left: 92px;
+}
+
+.back-card {
+    height: 100%;
+    width: 100%;
+}
+
+.back>p {
+    letter-spacing: 2px;
+    position: absolute;
+    right: 54px;
+    top: 110px;
+}
+
+/* Input-Message */
+
+.input-message {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Form */
+
+.form,
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    justify-content: center;
+    margin-left: 10px;
+    max-width: 500px;
+    width: 80%;
+}
+
+.form {
+    display: flex;
+}
+
+.form p:not(.error) {
+    color: hsl(279, 6%, 55%);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.form input {
+    border-radius: 10px;
+    border: 1px solid hsl(270, 3%, 87%);
+    color: hsl(279, 6%, 55%);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    height: 42px;
+    margin-top: 10px;
+    outline: none;
+    padding: 15px 14px;
+    width: 100%;
+}
+
+.form input::placeholder {
+    color: hsl(270, 3%, 87%);
+}
+
+.form input:focus,
+.form input:hover {
+    border-color: hsl(249, 99%, 64%);
+}
+
+.form .error {
+    color: hsl(0, 100%, 66%);
+    display: none;
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.form .date-cvc {
+    display: flex;
+    gap: 20px;
+}
+
+.form .cvc {
+    width: 100%;
+}
+
+.form .date .inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.form button {
+    background-color: hsl(278, 68%, 11%);
+    border-radius: 10px;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    height: 52px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+/* Thank you Message */
+
+.thank-you {
+    align-items: center;
+    display: none;
+}
+
+.thank-you img {
+    height: 80px;
+    width: 80px;
+}
+
+.thank-you p:nth-child(2) {
+    color: hsl(278, 68%, 11%);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.thank-you p:nth-child(3) {
+    color: hsl(279, 6%, 55%);
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: -15px;
+}
+
+.thank-you button {
+    background-color: hsl(278, 68%, 11%);
+    border-radius: 10px;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    height: 52px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-height: 800px) {
+    .front,
+    .back {
+        height: 50%;
+        width: 76%;
+    }
+
+    .form .error {
+        margin-bottom: -15px;
+    }
+
+    .front img:first-child {
+        height: 35px;
+        left: 20px;
+        top: 15px;
+        width: 60px;
+    }
+
+    .front>p {
+        bottom: 55px;
+        font-size: 20px;
+        left: 20px;
+    }
+
+    .front .down-info {
+        bottom: 20px;
+        font-size: 12px;
+        left: 20px;
+    }
+
+    .back>p {
+        font-size: 12px;
+        right: 45px;
+        top: 80px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .content {
+        gap: 40px;
+    }
+
+    .date-cvc {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        background-image: url(./images/bg-main-mobile.png);
+        background-position: top center;
+    }
+
+    .content {
+        flex-direction: column;
+        height: 100%;
+        padding: 30px 15px;
+        width: 100%;
+    }
+
+    .input-message,
+    .form,
+    .thank-you {
+        width: 100%;
+    }
+
+    .date-cvc {
+        flex-direction: row;
+    }
+
+    .front,
+    .back {
+        height: 65%;
+        width: 80%;
+    }
+
+    .cards {
+        display: block;
+        height: 34%;
+        position: relative;
+    }
+
+    .front {
+        top: 100px;
+        z-index: 1;
+    }
+
+    .back {
+        left: 60px;
+        margin-left: 0;
+        top: -123px;
+    }
+
+    .form .error {
+        margin-bottom: -15px;
+    }
+
+    .front img:first-child {
+        height: 25px;
+        width: 50px;
+    }
+
+    .front>p {
+        bottom: 45px;
+        font-size: 14px;
+    }
+
+    .front .down-info {
+        font-size: 8px;
+    }
+
+    .back>p {
+        font-size: 10px;
+        right: 40px;
+        top: 65px;
+    }
+}
